@@ -185,3 +185,37 @@ ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "le
 ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
 ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero', { origin: "bottom" });
 
+ document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const fullMessage = `Isim: ${name}\nTelefon Raqam: ${phone}\nEmail: ${email}\nXabar: ${message}`;
+
+    const botToken = '7732796276:AAHZ8uO9o-2hbXJiuFgJ_6vQRJ5c6RGqc60';
+    const chatId = '@zayavkalar_infosi'; // Kanal username yoki chat_id
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: chatId,
+            text: fullMessage
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Xabar yuborildi:', data);
+        alert('Xabaringiz yuborildi!');
+    })
+    .catch(error => {
+        console.error('Xatolik yuz berdi:', error);
+        alert('Xabar yuborishda xatolik yuz berdi.');
+    });
+});

@@ -14,7 +14,7 @@
 <body>
     <div class="overlay"></div>
     <header>
-        <a href="#" class="logo"><span>A</span>leksandr</a>
+        <a href="#" class="logo"><span></span>Aleksandr</a>
         <ul class="navlist">
             <li><a href="#home" class="active">Asosiy</a></li>
             <li><a href="#about">Men Haqimda</a></li>
@@ -73,7 +73,7 @@
             <img src="img/sticker.webp" alt="">
             <div class="rotate-text">
                 <div class="text">
-                    <p>Men Backend va Frontend dasturchiman va Dizayner Blogger</p>
+                    <p>Men Sun'iy intellekt yo'nalishidagi dastruchiman</p>
                 </div>
                 <span><i></i></span>
             </div>
@@ -307,7 +307,7 @@
                     <span></span>
                 </div>
                 <h3>Backend Dasturlash</h3>
-                <p>Backend Dasturlash Python, Django va FastAPI yordamida ma'lumotlarni qayta ishlash va ishonchli hamda samarali dasturlar yaratish qo'limdan keladi</p>
+                <p>Backend Dasturlash Django yordamida ma'lumotlarni qayta ishlash va ishonchli hamda samarali dasturlar yaratish qo'limdan keladi</p>
                 <a href="#" class="readMore">Batafsil</a>
             </div>
 
@@ -573,10 +573,33 @@
 
     <!-- sertifikatlar -->
 
-
-
-    <!-- pre-footer -->
-
+  <!-- pre-footer -->
+     <style>
+        .input-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .input-box input {
+            flex: 1;
+            padding: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
     <section class="down-box" id="contact">
         <div class="contactSkills">
             <div class="contact-info">
@@ -584,19 +607,17 @@
                     <h2 class="heading">XABAR QOLDIRISH</h2>
                     <span>MENGA XABAR QOLDIRING</span>
                 </div>
-                <form action="#">
-                    <div class="input-box">
-                        <input type="text" placeholder="Isim">
-                        <input type="text" placeholder="Telefon Raqam">
-                    </div>
-                    <input type="email" placeholder="Email">
-                    <!-- <input type="text" placeholder="Subject"> -->
-                    <textarea name="#" id="" cols="30" rows="10" >
-                    </textarea>
-                    <div class="formBtn">
-                        <button type="submit" class="btn">XABAR JO'NATISH</button>
-                    </div>
-                </form>
+                 <form id="contactForm" action="#">
+        <div class="input-box">
+            <input type="text" id="name" placeholder="Isim">
+            <input type="text" id="phone" placeholder="Telefon Raqam">
+        </div>
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="message" cols="30" rows="10" placeholder="Xabaringiz"></textarea>
+        <div class="formBtn">
+            <button type="submit" class="btn">XABAR JO'NATISH</button>
+        </div>
+    </form>
             </div>
             <div class="skills">
                 <div class="container">
@@ -610,13 +631,59 @@
                             <span>Gmail:</span> <h2>beloovsasha23@gmail.com</h2>
                             <span>Instagram:</span> <h2>sashbeloov</h2>
                             <span>telegram:</span> <h2>@Belovsasha</h2>
-                            <span>GitHub:</span> <h2>https://github.com/sashbeloov</h2>
+                            <span>Linkedin:</span> <h2>https://github.com/sashbeloov</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- pre-footer -->
+
+
+<!--    &lt;!&ndash; pre-footer &ndash;&gt;-->
+
+<!--    <section class="down-box" id="contact">-->
+<!--        <div class="contactSkills">-->
+<!--            <div class="contact-info">-->
+<!--                <div class="main-text">-->
+<!--                    <h2 class="heading">XABAR QOLDIRISH</h2>-->
+<!--                    <span>MENGA XABAR QOLDIRING</span>-->
+<!--                </div>-->
+<!--                <form action="#">-->
+<!--                    <div class="input-box">-->
+<!--                        <input type="text" placeholder="Isim">-->
+<!--                        <input type="text" placeholder="Telefon Raqam">-->
+<!--                    </div>-->
+<!--                    <input type="email" placeholder="Email">-->
+<!--                    &lt;!&ndash; <input type="text" placeholder="Subject"> &ndash;&gt;-->
+<!--                    <textarea name="#" id="" cols="30" rows="10" >-->
+<!--                    </textarea>-->
+<!--                    <div class="formBtn">-->
+<!--                        <button type="submit" class="btn">XABAR JO'NATISH</button>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <div class="skills">-->
+<!--                <div class="container">-->
+<!--                    <div class="skillBox">-->
+<!--                        <div class="main-text">-->
+<!--                            <h2 class="heading">BOG'LANISH UCHUN MA'LUMOTLAR</h2>-->
+<!--                            <span>MEN BILAN BOG'LANING</span>-->
+<!--                        </div>-->
+<!--                        <div class="main-contact">-->
+<!--                            <span>Telefon raqam: </span> <h2>+998 (99) 315-05-42</h2>-->
+<!--                            <span>Gmail:</span> <h2>beloovsasha23@gmail.com</h2>-->
+<!--                            <span>Instagram:</span> <h2>sashbeloov</h2>-->
+<!--                            <span>telegram:</span> <h2>@Belovsasha</h2>-->
+<!--                            <span>GitHub:</span> <h2>https://github.com/sashbeloov</h2>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <!-- pre-footer -->
 
