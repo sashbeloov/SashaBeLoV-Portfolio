@@ -1,1 +1,1 @@
-web: python3 sashabelov.py
+web: python sashabelov.py
