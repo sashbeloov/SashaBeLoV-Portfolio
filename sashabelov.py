@@ -8,10 +8,10 @@ from aiogram.utils.chat_action import ChatActionSender
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-token = os.getenv("TOKEN")
-
-bot = Bot(token=token)
+# load_dotenv()
+# token = os.getenv("TOKEN")
+TOKEN="7758945683:AAGnwI8N1fW-VmEH6ptAJRcu0NN_CoB_mJA"
+bot = Bot(token=TOKEN)
 dp = Dispatcher()
 user_data = {}
 
