@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from aiogram import types, Bot, Dispatcher
 from aiogram.filters import Command
 from aiogram.types import FSInputFile
