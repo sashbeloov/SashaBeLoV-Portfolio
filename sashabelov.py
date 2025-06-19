@@ -77,7 +77,7 @@ async def handle_text(message: types.Message):
 
 
     elif message.text in {"⬅️ Orqaga", "⬅️ Назад", "⬅️ Back"}:
-        if user_data[user_id]["state"] in {"cv_download_menu","contact","experience","education", "projects"}:
+        if user_data[user_id]["state"] in {"cv_download_menu","contact","experience","education", "projects","leetcode","pro","githubinfo","portfolio"}:
             await menu(message)
         elif user_data[user_id]["state"] in {"korzinka","havas","sportmaster"}:
             await experience(message)
@@ -485,6 +485,7 @@ async def githubinfo(message: types.Message):
 @dp.message(Command(commands=["👨‍💻 Портфолио","👨‍💻 Portfolio","👨‍💻 Portfolio"]))
 async def portfolio(message: types.Message):
     user_id = message.from_user.id
+    user_data[user_id]["state"] = "portfolio"
     choose_lang = user_data[user_id]["language"]
     button = [
         [types.InlineKeyboardButton(text='Link',url="https://sashabeloov-portfolio.netlify.app/")]
@@ -502,6 +503,7 @@ async def portfolio(message: types.Message):
 @dp.message(Command(commands=["🎯 projcets","🎯 проекты"]))
 async def pro(message: types.Message):
     user_id = message.from_user.id
+    user_data[user_id]["state"] = "pro"
     choose_lang = user_data[user_id]["language"]
     button = [
         [types.InlineKeyboardButton(text='Chat Doctor', url="https://huggingface.co/sashabeloov/Gemma-2-2b-it-ChatDoctor"),
@@ -535,6 +537,7 @@ async def pro(message: types.Message):
 @dp.message(Command(commands=["🧩 Leetcode"]))
 async def leetcode(message: types.Message):
     user_id = message.from_user.id
+    user_data[user_id]["state"] = "leetcode"
     choose_lang = user_data[user_id]["language"]
     file_path = "images/leetcode_total.jpg"
     await message.answer_photo(
